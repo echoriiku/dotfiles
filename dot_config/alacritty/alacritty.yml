@@ -14,9 +14,11 @@ window:
 
 # Font settings #
 font:
+  size: 12.5
+  offset:
+    y: 1
   normal:
      family: CaskaydiaCove Nerd Font
-  size: 12.5
 
 # Cursor settings #
 cursor:
@@ -31,6 +33,10 @@ selection:
 
 # Config settings #
 live_config_realod: true
+
+# New instance inside current folder #
+key_bindings:
+  - { key: Return, mods: Shift, action: SpawnNewInstance }
 
 # Theme settings #
 import:
