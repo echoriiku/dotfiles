@@ -1,0 +1,37 @@
+# Riiku Alacritty terminal #
+
+# Window settings #
+window:
+  padding:
+    x: 5
+    y: 5
+    dinamic-padding: true
+  decorations: none
+  # dimensions:
+  #   columns: 100
+  #   lines: 35
+  startup_mode: Maximized
+
+# Font settings #
+font:
+  normal:
+     family: CaskaydiaCove Nerd Font
+  size: 12.5
+
+# Cursor settings #
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+    blink-interval: 300
+
+# Selection settings #
+selection:
+  save_to_clipboard: true
+
+# Config settings #
+live_config_realod: true
+
+# Theme settings #
+import:
+  - ~/.config/alacritty/themes/catppuccin-mocha.yml
