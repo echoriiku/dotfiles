@@ -23,3 +23,7 @@
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dust](https://github.com/bootandy/dust)
 - [delta](https://github.com/dandavison/delta)
+
+---
+
+Managed with [Chezmoi](https://github.com/twpayne/chezmoi)
