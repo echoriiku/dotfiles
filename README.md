@@ -2,7 +2,7 @@
 
 ## Riiku's dotfiles
 
-- Terminal: [Alacritty](https://github.com/alacritty/alacritty/)
+- Terminal: [Kitty](https://github.com/kovidgoyal/kitty)
 - Shell: [Fish](https://github.com/fish-shell/fish-shell)
 - Editor: [Helix](https://github.com/helix-editor/helix)
 - Video Player: [MPV](https://github.com/mpv-player/mpv)
