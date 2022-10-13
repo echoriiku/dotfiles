@@ -2603,6 +2603,15 @@ end
 -- `xplr.fn.custom.my_plugin.my_function` to define custom functions.
 xplr.fn.custom = {}
 
+-- Plugins Keybind
+xplr.config.modes.builtin.default.key_bindings.on_key.x = {
+  help = "xpm",
+  messages = {
+    "PopMode",
+    { SwitchModeCustom = "xpm" },
+  },
+}
+
 -- Plugins
 local home = os.getenv("HOME")
 local xpm_path = home .. "/.local/share/xplr/dtomvan/xpm.xplr"
@@ -2624,14 +2633,24 @@ os.execute(
   )
 )
 
+local home = os.getenv("HOME")
+package.path = home
+.. "/.config/xplr/plugins/?/init.lua;"
+.. home
+.. "/.config/xplr/plugins/?.lua;"
+.. package.path
+
 require('xpm').setup {
-  'dtomvan/xpm.xplr',
-  { 'dtomvan/extra-icons.xplr',
-      after = function()
-          xplr.config.general.table.row.cols[2] = { format = "custom.icons_dtomvan_col_1" }
-      end
-  },
-  'prncss-xyz/icons.xplr'
-  -- 'sayanarijit/zentable.xplr'
-  
+    'dtomvan/xpm.xplr',
+    'dtomvan/ouch.xplr',
+    'igorepst/context-switch.xplr',
+    'prncss-xyz/icons.xplr',
+    'sayanarijit/fzf.xplr',
+    'sayanarijit/zentable.xplr',
+    {
+        'dtomvan/extra-icons.xplr',
+        after = function()
+            xplr.config.general.table.row.cols[2] = { format = 'custom.icons_dtomvan_col_1' }
+        end,
+    },
 }

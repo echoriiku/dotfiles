@@ -22,7 +22,7 @@
 #     end
 # end
 
-
+navi widget fish | source
 zoxide init fish | source
 starship init fish | source
 set fish_greeting
@@ -56,6 +56,7 @@ end
     abbr -a dnfu                      'sudo dnf update'
     abbr -a flup                      'flatpak update'
     abbr -a gu                        'gitui'
+    abbr -a lg                        'lazygit'
     abbr -a ls                        'lsd --group-directories-first'
     abbr -a lsa                       'lsd --group-directories-first -a'
     abbr -a ll                        'lsd --group-directories-first -l'
@@ -66,6 +67,8 @@ end
     abbr -a zl                        'zellij'
     abbr -a xp                        'xplr'
     abbr -a cargup                    'cargo install-update -a'
+    abbr -a tarc                      'tar -cvf'
+    abbr -a tard                      'tar -xvf'
 
 
 #autostart fetch script

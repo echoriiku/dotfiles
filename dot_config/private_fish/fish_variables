@@ -20,6 +20,8 @@ SETUVAR _fish_abbr_mc:mkdir\x2dcd
 SETUVAR _fish_abbr_q:exit
 SETUVAR _fish_abbr_re:restore
 SETUVAR _fish_abbr_rm:trash
+SETUVAR _fish_abbr_tarc:tar\x20\x2dcvf
+SETUVAR _fish_abbr_tard:tar\x20\x2dxvf
 SETUVAR _fish_abbr_tm:tmux
 SETUVAR _fish_abbr_toipe:toipe\x20\x2dn\x20100
 SETUVAR _fish_abbr_typer:typer\x20\x2dm\x20\x2d\x2dmonkeytype\x2dlanguage\x20portuguese\x20\x2dl\x20100

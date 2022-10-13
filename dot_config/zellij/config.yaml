@@ -4,9 +4,9 @@
 # In order to troubleshoot your configuration try using the following command:
 # `zellij setup --check`
 # It should show current config locations and features that are enabled.
-# ui:
-#   pane_frames:
-#     rounded_corners: true
+ui:
+  pane_frames:
+    rounded_corners: true
 
 keybinds:
     unbind: true
@@ -597,7 +597,7 @@ pane_frames: true
 # Choose the theme that is specified in the themes section.
 # For some examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 # Default: default
-theme: gruvbox-dark
+theme: tokyo-night-storm
 
 # Choose the mode that zellij uses when starting up.
 # Default: normal
