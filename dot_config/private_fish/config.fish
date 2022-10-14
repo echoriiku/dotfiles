@@ -58,6 +58,7 @@ end
     abbr -a gu                        'gitui'
     abbr -a lg                        'lazygit'
     abbr -a ls                        'lsd --group-directories-first'
+    abbr -a lst                       'lsd --group-directories-first --tree'
     abbr -a lsa                       'lsd --group-directories-first -a'
     abbr -a ll                        'lsd --group-directories-first -l'
     abbr -a lla                       'lsd --group-directories-first -la'

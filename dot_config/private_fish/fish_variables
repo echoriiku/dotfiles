@@ -16,6 +16,7 @@ SETUVAR _fish_abbr_lla:lsd\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2dla
 SETUVAR _fish_abbr_ls:lsd\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
 SETUVAR _fish_abbr_lsa:lsd\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2da
 SETUVAR _fish_abbr_lsl:exa\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dicons\x20\x2dl
+SETUVAR _fish_abbr_lst:lsd\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dtree
 SETUVAR _fish_abbr_mc:mkdir\x2dcd
 SETUVAR _fish_abbr_q:exit
 SETUVAR _fish_abbr_re:restore

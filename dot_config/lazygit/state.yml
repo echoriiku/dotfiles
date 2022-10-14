@@ -1,5 +1,7 @@
-lastupdatecheck: 0
+lastupdatecheck: 1665640615
 recentrepos:
+- /home/riiku/.local/share/chezmoi
+- /home/riiku/myrepos/fedora-setup
 - /home/riiku/myrepos/fedora-minimal-i3gaps
 startuppopupversion: 5
 customcommandshistory: []
