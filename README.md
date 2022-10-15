@@ -1,4 +1,4 @@
-[![avnruq.png](https://i.postimg.cc/pX5J4x0v/avnruq.png)](https://postimg.cc/KRFTgXSp)
+<img title="neet" src="https://github.com/kamiyaa/joshuto">
 
 ## Riiku's dotfiles
 
@@ -14,7 +14,7 @@
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [lsd](https://github.com/Peltoche/lsd)
 - [bottom](https://github.com/ClementTsang/bottom)
-- [xplr](https://github.com/sayanarijit/xplr)
+- [joshuto](https://github.com/kamiyaa/joshuto)
 - [gitui](https://github.com/extrawurst/gitui)
 - [bat](https://github.com/sharkdp/bat)
 - [trashy](https://github.com/oberblastmeister/trashy)
