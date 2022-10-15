@@ -1,4 +1,4 @@
-<img title="neet" src="https://github.com/kamiyaa/joshuto">
+<img title="neet" src="https://i.postimg.cc/pX5J4x0v/avnruq.png">
 
 ## Riiku's dotfiles
 
