@@ -67,9 +67,11 @@ end
     abbr -a tm                        'tmux'
     abbr -a zl                        'zellij'
     abbr -a xp                        'xplr'
+    abbr -a js                        'joshuto'
     abbr -a cargup                    'cargo install-update -a'
     abbr -a tarc                      'tar -cvf'
     abbr -a tard                      'tar -xvf'
+    abbr -a tb                        'nc termbin.com 9999'
 
 
 #autostart fetch script

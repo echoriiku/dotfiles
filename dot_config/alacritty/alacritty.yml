@@ -14,9 +14,10 @@ window:
 
 # Font settings #
 font:
-  size: 12.5
+  size: 13
   offset:
     y: 1
+    x: 1
   normal:
     family: CaskaydiaCove Nerd Font
 
