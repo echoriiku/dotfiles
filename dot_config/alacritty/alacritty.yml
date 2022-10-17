@@ -14,7 +14,7 @@ window:
 
 # Font settings #
 font:
-  size: 13
+  size: 12
   offset:
     y: 1
     x: 1

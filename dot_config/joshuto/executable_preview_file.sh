@@ -28,7 +28,7 @@ IFS=$'\n'
 ## 7    | image      | Display the file directly as an image
 
 FILE_PATH=""
-PREVIEW_WIDTH=10
+PREVIEW_WIDTH=2
 PREVIEW_HEIGHT=10
 PREVIEW_X_COORD=0
 PREVIEW_Y_COORD=0
@@ -107,6 +107,16 @@ handle_extension() {
         ##    exiftool "${FILE_PATH}" && exit 5
         ##    exit 1;;
 
+        rs|toml|sh)
+            echo "hello: ${PREVIEW_WIDTH}"
+            bat "${FILE_PATH}" && exit 5
+            ;;
+
+        ## Markdown
+        md|markdown)
+            glow "${FILE_PATH}" && exit 5
+            ;;
+            
         ## BitTorrent
         torrent)
             transmission-show -- "${FILE_PATH}" && exit 5

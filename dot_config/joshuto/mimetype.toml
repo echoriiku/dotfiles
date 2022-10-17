@@ -5,6 +5,7 @@ audio_default	= [
 ]
 
 image_default	= [
+	{ command = "mpv", args = [ "--" ] , fork = true, silent = true },
 	{ command = "qimgv", args = [ "--" ], fork = true, silent = true },
 	{ command = "krita", args = [ "--" ], fork = true, silent = true },
 	{ command = "exiftool", confirm_exit = true },
@@ -21,9 +22,7 @@ video_default	= [
 ]
 
 text_default	= [
-	{ command = "micro" },
 	{ command = "hx" },
-	{ command = "gedit", fork = true, silent = true },
 	{ command = "bat", args = [ "--paging=always" ] },
 ]
 
@@ -167,9 +166,8 @@ aup.app_list	= [
 	{ command = "audacity", fork = true, silent = true } ]
 
 m3u.app_list	= [
-	{ command = "micro" },
+	{ command = "hx" },
 	{ command = "mpv" },
-	{ command = "gedit", fork = true, silent = true },
 	{ command = "bat", confirm_exit = true } ]
 
 odt.inherit	= "libreoffice_default"
@@ -194,8 +192,7 @@ kdenlive.app_list = [
 ]
 
 tex.app_list	= [
-	{ command = "micro" },
-	{ command = "gedit", fork = true, silent = true },
+	{ command = "hx" },
 	{ command = "bat", confirm_exit = true },
 	{ command = "pdflatex" } ]
 

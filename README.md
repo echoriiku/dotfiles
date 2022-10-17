@@ -1,6 +1,8 @@
 <img title="neet" src="https://i.postimg.cc/pX5J4x0v/avnruq.png">
 
-## Riiku's dotfiles
+# Riiku's dotfiles
+
+## Main tools
 
 - Terminal: [Alacritty](https://github.com/alacritty/alacritty)
 - Shell: [Fish](https://github.com/fish-shell/fish-shell)

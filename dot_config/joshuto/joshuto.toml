@@ -14,7 +14,7 @@ automatically_count_files = false
 collapse_preview = true
 
 # ratios for parent view (optional), current view and preview
-column_ratio = [1, 9, 10]
+column_ratio = [3, 9, 9]
 scroll_offset = 6
 show_borders = true
 show_hidden = false
