@@ -107,7 +107,7 @@ handle_extension() {
         ##    exiftool "${FILE_PATH}" && exit 5
         ##    exit 1;;
 
-        rs|toml|sh)
+        rs|toml|sh|conf|lua)
             echo "hello: ${PREVIEW_WIDTH}"
             bat "${FILE_PATH}" && exit 5
             ;;
