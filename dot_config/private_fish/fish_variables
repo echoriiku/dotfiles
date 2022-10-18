@@ -20,6 +20,7 @@ SETUVAR _fish_abbr_lsl:exa\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dgroup\x2ddirect
 SETUVAR _fish_abbr_lst:exa\x20\x2d\x2dicons\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2dT
 SETUVAR _fish_abbr_mc:mkdir\x2dcd
 SETUVAR _fish_abbr_q:exit
+SETUVAR _fish_abbr_r:ranger
 SETUVAR _fish_abbr_re:restore
 SETUVAR _fish_abbr_rm:trash
 SETUVAR _fish_abbr_tarc:tar\x20\x2dcvf

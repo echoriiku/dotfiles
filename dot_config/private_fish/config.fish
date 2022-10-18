@@ -64,6 +64,7 @@ end
     abbr -a lla                       'exa --icons --group-directories-first -lha'
     abbr -a rm                        'trash'
     abbr -a q                         'exit'
+    abbr -a r                         'ranger'
     abbr -a tm                        'tmux'
     abbr -a zl                        'zellij'
     abbr -a xp                        'xplr'
