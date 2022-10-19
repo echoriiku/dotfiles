@@ -28,6 +28,7 @@ starship init fish | source
 set fish_greeting
 set EDITOR "hx"
 set BROWSER "firefox"
+set PAGER "bat -f"
 set fzf_preview_dir_cmd "lsd -a"
 export XDG_CONFIG_HOME=$HOME/.config
 
