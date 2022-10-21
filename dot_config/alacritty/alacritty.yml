@@ -21,7 +21,8 @@ font:
   normal:
     # family: CaskaydiaCove Nerd Font
     family: CartographCF Nerd Font
-
+    style: Medium
+    
 # Cursor settings #
 cursor:
   style:
