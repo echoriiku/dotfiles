@@ -29,7 +29,7 @@ set fish_greeting
 set EDITOR "hx"
 set BROWSER "firefox"
 set PAGER "bat --color=always"
-set fzf_preview_dir_cmd "lsd -a"
+set fzf_preview_dir_cmd "exa -a"
 export XDG_CONFIG_HOME=$HOME/.config
 
 
@@ -74,7 +74,10 @@ end
     abbr -a tarc                      'tar -cvf'
     abbr -a tard                      'tar -xvf'
     abbr -a tb                        'nc termbin.com 9999'
-
+    abbr -a cha                       'chezmoi add'
+    abbr -a chs                       'chezmoi status'
+    abbr -a chc                       'chezmoi cd'
+    abbr -a chd                       'chezmoi diff | delta'
 
 #autostart fetch script
 cutefetch $(printf '\t-k\n-b\n-p' | shuf -n 1) $(shuf -i 1-13 -n 1)

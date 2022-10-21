@@ -28,7 +28,8 @@ IFS=$'\n'
 ## 7    | image      | Display the file directly as an image
 
 FILE_PATH=""
-PREVIEW_WIDTH=2
+PREVIEW_IMAGE_ENABLED=0
+##PREVIEW_WIDTH=10
 PREVIEW_HEIGHT=10
 PREVIEW_X_COORD=0
 PREVIEW_Y_COORD=0
@@ -107,8 +108,7 @@ handle_extension() {
         ##    exiftool "${FILE_PATH}" && exit 5
         ##    exit 1;;
 
-        rs|toml|sh|conf|lua|yaml)
-            echo "hello: ${PREVIEW_WIDTH}"
+        rs|toml|sh|conf|lua|yaml|json)
             bat "${FILE_PATH}" && exit 5
             ;;
 
@@ -216,13 +216,10 @@ handle_mime() {
             xls2csv -- "${FILE_PATH}" && exit 5
             exit 1;;
 
-        ## Text
-        text/* | */xml)
-            bat --color=always --paging=never \
-		--style=plain \
-		--terminal-width="${PREVIEW_WIDTH}" \
-		 "${FILE_PATH}" && exit 5
-            exit 2;;
+      ## Text
+  		text/* | */xml)
+  			bat -p "${FILE_PATH}" && exit 5
+  			exit 1;;
 
         ## DjVu
         image/vnd.djvu)
@@ -247,13 +244,12 @@ handle_mime() {
 }
 
 handle_fallback() {
-    # echo '----- File Type Classification -----' && file --dereference --brief -- "${FILE_PATH}" && exit 5
-    exit 1
+	# echo '----- File Type Classification -----' && file --dereference --brief -- "${FILE_PATH}" && exit 5
+	exit 1
 }
 
-
 MIMETYPE="$( file --dereference --brief --mime-type -- "${FILE_PATH}" )"
-handle_extension
+handle_extension "${FILE_EXTENSION_LOWER}"
 handle_mime "${MIMETYPE}"
 handle_fallback
 

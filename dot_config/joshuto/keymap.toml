@@ -10,8 +10,9 @@ keymap = [
 	{ keys = [ "Q" ],		command = "quit --output-current-directory" },
 
 	{ keys = [ "R" ],		command = "reload_dirlist" },
-	{ keys = [ "z", "h" ],		command = "toggle_hidden" },
-	{ keys = [ "ctrl+h" ],		command = "toggle_hidden" },
+	{ keys = [ "z", "c" ],		command = ":tar -xvf ${FILE_PATH}" },
+	{ keys = [ "z", "d" ],		command = ":tar -cvf ${FILE_PATH}" },
+	{ keys = [ "." ],		command = "toggle_hidden" },
 	{ keys = [ "\t" ],		command = "tab_switch 1" },
 	{ keys = [ "backtab" ],		command = "tab_switch -1" },
 
