@@ -7,7 +7,7 @@ color-modes = true
 auto-completion = true
 auto-info = true
 completion-trigger-len = 1
-# bufferline = "always" #wait until 22.10 release to enable it
+bufferline = "multiple"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-encoding"]
