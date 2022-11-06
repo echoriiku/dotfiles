@@ -42,7 +42,6 @@ end
     abbr -a lsa                       'exa --icons --group-directories-first -a'
     abbr -a ll                        'exa --icons --group-directories-first -lh'
     abbr -a lla                       'exa --icons --group-directories-first -lha'
-    abbr -a rm                        'trash'
     abbr -a q                         'exit'
     abbr -a r                         'ranger'
     abbr -a tm                        'tmux'

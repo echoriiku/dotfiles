@@ -1,0 +1,55 @@
+# Riiku
+
+spacing         = 1
+padding         = 2
+hide_ascii      = true
+separator       = " "
+key_color       = "Magenta"
+separator_color = "Magenta"
+prefer_small_ascii = true
+
+[palette]
+type            = "Light"
+glyph           = " ● "
+visible         = true
+
+[bar]
+glyph           = "●"
+symbol_open     = '('
+symbol_close    = ')'
+visible         = false
+hide_delimiters = true
+
+[box]
+title           = " Riiku  "
+border          = "rounded"
+visible         = true
+
+[box.inner_margin]
+x               = 0
+y               = 0
+
+[randomize]
+key_color       = false
+separator_color = false
+pool            = "base"
+
+[keys]
+host            = ""
+kernel          = ""
+battery         = "Battery"
+os              = "OS"
+de              = "DE"
+wm              = "WM"
+distro          = ""
+terminal        = "Term"
+shell           = ""
+packages        = ""
+uptime          = ""
+memory          = ""
+machine         = "Machine"
+local_ip        = "IP"
+backlight       = "Brightness"
+resolution      = "Resolution"
+cpu_load        = "CPU Load"
+cpu             = "CPU"

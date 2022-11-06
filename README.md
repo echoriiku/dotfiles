@@ -17,10 +17,11 @@
 - [exa](https://github.com/ogham/exa)
 - [bottom](https://github.com/ClementTsang/bottom)
 - [lf](https://github.com/gokcehan/lf)
-- [lazygit](https://github.com/jesseduffield/lazygit)
+- [gitui](https://github.com/extrawurst/gitui)
+  ~~- [lazygit](https://github.com/jesseduffield/lazygit)~~
 - [bat](https://github.com/sharkdp/bat)
 - [trashy](https://github.com/oberblastmeister/trashy)
-- [tldr](https://github.com/tldr-pages/tldr)
+- [tealdeer](https://github.com/dbrgn/tealdeer)
 - [fzf](https://github.com/junegunn/fzf)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [dust](https://github.com/bootandy/dust)
