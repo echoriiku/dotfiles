@@ -6,7 +6,6 @@ hide_ascii      = true
 separator       = " "
 key_color       = "Magenta"
 separator_color = "Magenta"
-prefer_small_ascii = true
 
 [palette]
 type            = "Light"

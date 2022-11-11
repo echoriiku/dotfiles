@@ -13,7 +13,6 @@ set fzf_preview_dir_cmd "exa -a"
 export XDG_CONFIG_HOME=$HOME/.config
 
 # FUNCTIONS
-
 #backup
 function backup --argument filename
     cp $filename $filename.bak
@@ -23,7 +22,6 @@ end
 function restore --argument file
     mv $file (echo $file | sed s/.bak//)
 end
-
 
 #abbrs
     abbr -a bk                        'backup'
@@ -60,4 +58,3 @@ end
 
 #autostart fetch script
 cutefetch $(printf '\t-k\n-b\n-p' | shuf -n 1) $(shuf -i 1-13 -n 1)
-
