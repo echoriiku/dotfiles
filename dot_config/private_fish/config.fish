@@ -57,4 +57,5 @@ end
     abbr -a upd                       'sudo dnf update --refresh && flatpak update && cargo install-update -a'
 
 #autostart fetch script
-cutefetch $(printf '\t-k\n-b\n-p' | shuf -n 1) $(shuf -i 1-13 -n 1)
+# cutefetch $(printf '\t-k\n-b\n-p' | shuf -n 1) $(shuf -i 1-13 -n 1)
+macchina

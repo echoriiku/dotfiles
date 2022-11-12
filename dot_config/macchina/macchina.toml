@@ -45,4 +45,4 @@ theme = "riiku"
   # - Memory
   # - Battery
 # Example:
-  show = ["Host", "Kernel", "Distribution", "Packages", "Shell", "Uptime", "Memory"]
+  show = ["Host", "Kernel", "Distribution", "Shell", "Uptime"]
