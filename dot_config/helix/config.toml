@@ -1,4 +1,4 @@
-theme = "gruvbox"
+theme = "rose_pine"
 
 [editor]
 line-number = "relative"
@@ -10,9 +10,9 @@ completion-trigger-len = 1
 bufferline = "multiple"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-encoding"]
+left = ["mode", "spinner", "file-encoding", "primary-selection-length"]
 center = ["diagnostics", "file-name"]
-right = ["selections", "position", "position-percentage", "file-type"]
+right = ["position", "position-percentage", "file-type"]
 separator = "│"
 
 [editor.lsp]

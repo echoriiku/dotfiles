@@ -4,7 +4,6 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "javascript" }
-formatter = { command = 'prettier', args = ["--parser", "json" ] }
 
 [[language]]
 name = "jsx"
@@ -34,7 +33,6 @@ injection-regex = "css"
 file-types = ["css", "scss"]
 roots = []
 language-server = { command = "vscode-css-language-server", args = ["--stdio"] }
-formatter = { command = 'prettier', args = ["--parser", "css" ] }
 indent = { tab-width = 2, unit = "  " }
 
 [[grammar]]
@@ -61,7 +59,6 @@ injection-regex = "html"
 file-types = ["html"]
 roots = []
 language-server = { command = "vscode-html-language-server", args = ["--stdio"] }
-formatter = { command = 'prettier', args = ["--parser", "html" ] }
 auto-format = true
 config = { "provideFormatter" = true }
 indent = { tab-width = 2, unit = "  " }
