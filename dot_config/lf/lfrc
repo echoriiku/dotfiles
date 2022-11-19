@@ -183,4 +183,4 @@ map au unarchive
 
 # directories aliases
 map gc cd ~/.config
-map gd cd ~/Files/HD1/Downloads
+map gd cd ~/drives/drive_1/Downloads

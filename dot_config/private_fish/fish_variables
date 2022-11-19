@@ -81,4 +81,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/riiku/\x2espicetify\x1e/home/riiku/\x2edeno/bin\x1e/home/riiku/\x2ecargo/bin\x1e/home/riiku/\x2elocal/bin
+SETUVAR fish_user_paths:/home/riiku/\x2enimble/bin\x1e/home/riiku/\x2enim/bin\x1e/home/riiku/\x2espicetify\x1e/home/riiku/\x2edeno/bin\x1e/home/riiku/\x2ecargo/bin\x1e/home/riiku/\x2elocal/bin
