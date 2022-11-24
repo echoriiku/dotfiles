@@ -21,6 +21,8 @@ font:
   normal:
     family: CartographCF Nerd Font
     style: Regular
+env:
+  TERM: xterm-256color
 
 # Cursor settings #
 cursor:

@@ -7,10 +7,10 @@ color-modes = true
 auto-completion = true
 auto-info = true
 completion-trigger-len = 1
-bufferline = "multiple"
+# bufferline = "multiple"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-encoding", "primary-selection-length"]
+left = ["mode", "spinner", "file-encoding"]
 center = ["diagnostics", "file-name"]
 right = ["position", "position-percentage", "file-type"]
 separator = "│"
