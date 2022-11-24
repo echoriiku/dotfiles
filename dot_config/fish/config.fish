@@ -11,6 +11,7 @@ set BROWSER "firefox"
 set PAGER "bat --color=always"
 set fzf_preview_dir_cmd "exa -a"
 export XDG_CONFIG_HOME=$HOME/.config
+fnm env --use-on-cd | source
 
 # FUNCTIONS
 #backup
