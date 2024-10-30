@@ -1,0 +1,51 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+auto-completion = true
+auto-info = true
+completion-trigger-len = 1
+bufferline = "multiple"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-encoding"]
+center = ["diagnostics", "file-name"]
+right = ["position", "position-percentage", "file-type"]
+separator = "│"
+
+[editor.lsp]
+display-messages = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+
+[editor.file-picker]
+hidden = false
+max-depth = 2
+
+# [keys.normal]
+# j = ["move_line_down", "align_view_center"]
+# k = ["move_line_up", "align_view_center"] 
+
+[keys.normal.space]
+"x" = ":buffer-close"
+"w" = { "r" = ":config-reload" }
+# "." = ":file_picker_in_buffer_directory"

@@ -1,0 +1,91 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+font_size 11.5 
+force_ltr no
+adjust_line_height  1
+adjust_column_width 0
+disable_ligatures never
+box_drawing_scale 0.001, 1, 1.5, 2
+
+# Cursor Settings #
+cursor_shape beam
+
+# Kitty mod key #
+kitty_mod ctrl+shift
+
+# Scrollback settings #
+scrollback_lines 1000
+scrollback_pager less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER
+scrollback_pager_history_size 0
+scrollback_fill_enlarged_window no
+wheel_scroll_multiplier 5.0
+touch_scroll_multiplier 1.0
+# Scrollback hotkeys #
+map kitty_mod+up        scroll_line_up
+map kitty_mod+k         scroll_line_up
+map kitty_mod+down      scroll_line_down
+map kitty_mod+j         scroll_line_down
+map kitty_mod+page_up   scroll_page_up
+map kitty_mod+page_down scroll_page_down
+map kitty_mod+home      scroll_home
+map kitty_mod+end       scroll_end
+map kitty_mod+h         show_scrollback
+
+# Url Settings #
+url_style dotted
+
+# Browser settings #
+open_url_with firefox 
+detect_urls yes
+
+# Select settings #
+copy_on_select yes
+
+# Performance tuning #
+
+repaint_delay 13
+input_delay 0
+sync_to_monitor yes
+
+# Window settings #
+remember_window_size  yes
+window_border_width 0.5pt
+draw_minimal_borders yes
+window_margin_width 6
+placement_strategy center
+hide_window_decorations yes
+confirm_os_window_close 0 
+
+# Tabs settings #
+tab_bar_edge top
+tab_bar_style powerline
+tab_bar_align center
+tab_powerline_style slanted
+
+# Tabs hotkeys #
+map kitty_mod+t     new_tab
+map kitty_mod+q     close_tab
+map kitty_mod+.     next_tab
+map kitty_mod+,     previous_tab
+map kitty_mod+alt+t set_tab_title
+
+# Layout customization hotkeys (copied from the docs) #
+map ctrl+[ layout_action decrease_num_full_size_windows
+map ctrl+] layout_action increase_num_full_size_windows
+map ctrl+/ layout_action mirror toggle
+map ctrl+y layout_action mirror true
+map ctrl+n layout_action mirror false
+
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrainsMono Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
