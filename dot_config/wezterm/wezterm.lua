@@ -5,8 +5,8 @@ local act = wezterm.action
 -- Main configuration table
 local config = {
 	automatically_reload_config = true,
-	font = wezterm.font("FantasqueSansM Nerd Font"),
-	font_size = 13.0,
+	font = wezterm.font("0xProto Nerd Font Mono"),
+	font_size = 12.0,
 	color_scheme = "Catppuccin Mocha",
 	window_decorations = "RESIZE",
 	animation_fps = 144,
