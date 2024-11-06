@@ -6,7 +6,7 @@ local act = wezterm.action
 local config = {
 	automatically_reload_config = true,
 	font = wezterm.font("0xProto Nerd Font Mono"),
-	font_size = 12.0,
+	font_size = 11.0,
 	color_scheme = "Catppuccin Mocha",
 	window_decorations = "RESIZE",
 	animation_fps = 144,
@@ -28,9 +28,9 @@ end)
 
 -- Window settings
 config.window_padding = {
-	left = 3,
-	right = 5,
-	top = 5,
+	left = 4,
+	right = 3,
+	top = 3,
 	bottom = 3,
 }
 config.window_close_confirmation = "NeverPrompt"

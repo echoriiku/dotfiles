@@ -226,6 +226,15 @@ plugins {
     }
 }
 
+// Set Rounded Corners
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
+
 // Plugins to load in the background when a new session starts
 // eg. "file:/path/to/my-plugin.wasm"
 // eg. "https://example.com/my-plugin.wasm"
@@ -237,12 +246,13 @@ load_plugins {
 //   - true
 //   - false (Default)
 // 
-simplified_ui true
+simplified_ui true 
  
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "catppuccin-frappe"
+ theme "catppuccin-frappe"
+// theme "nord"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -287,7 +297,7 @@ mouse_mode true
 //   - true (default, enabled)
 //   - false
 // 
-pane_frames false
+pane_frames false 
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
