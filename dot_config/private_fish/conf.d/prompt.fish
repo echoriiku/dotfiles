@@ -1,2 +1,2 @@
 # Init Starship prompt
-# starship init fish | source
+starship init fish | source
