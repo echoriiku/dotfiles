@@ -5,12 +5,14 @@ local act = wezterm.action
 -- Main configuration table
 local config = {
 	automatically_reload_config = true,
-	font = wezterm.font("0xProto Nerd Font Mono"),
+	font = wezterm.font("0xProto Nerd Font"),
 	font_size = 11.0,
+	initial_rows = 55,
+	initial_cols = 190,
 	color_scheme = "Catppuccin Mocha",
-	window_decorations = "RESIZE",
-	animation_fps = 144,
-	max_fps = 144,
+	window_decorations = "NONE",
+	animation_fps = 120,
+	max_fps = 120,
 	front_end = "WebGpu",
 	webgpu_power_preference = "HighPerformance",
 	hide_tab_bar_if_only_one_tab = false,
@@ -20,11 +22,11 @@ local config = {
 	tab_and_split_indices_are_zero_based = true,
 }
 
-local mux = wezterm.mux
-wezterm.on("gui-startup", function(cmd)
-	local tab, pane, window = mux.spawn_window(cmd or {})
-	window:gui_window():maximize()
-end)
+-- local mux = wezterm.mux
+-- wezterm.on("gui-startup", function(cmd)
+-- 	local tab, pane, window = mux.spawn_window(cmd or {})
+-- 	window:gui_window():maximize()
+-- end)
 
 -- Window settings
 config.window_padding = {

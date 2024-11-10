@@ -1,0 +1,95 @@
+theme = "catppuccin-mocha"
+
+# Padding-x
+#
+# define x axis padding (default is 0)
+#
+# Example:
+# padding-x = 10
+
+# Padding-y
+#
+# define y axis padding based on a format [top, left]
+# (default is [0, 0])
+#
+# Example:
+# padding-y = [30, 10]
+
+confirm-before-quit = false
+[cursor]
+shape = 'beam'
+blinking = false
+blinking-interval = 800
+
+[window]
+mode = "maximized"
+opacity = 1.0
+blur = false
+decorations = "disabled"
+
+[renderer]
+performance = "High"
+backend = "Automatic"
+# strategy = "Continuous"
+disable-unfocused-render = false
+
+# Keyboard
+#
+# use-kitty-keyboard-protocol - Enable Kitty Keyboard protocol
+#
+# disable-ctlseqs-alt - Disable ctlseqs with ALT keys
+#   - For example: Terminal.app does not deal with ctlseqs with ALT keys
+#
+# Example:
+[keyboard]
+use-kitty-keyboard-protocol = true
+# disable-ctlseqs-alt = false
+
+
+[fonts]
+size = 15
+extras = [{ family = "Symbols Nerd Font" }]
+
+[fonts.regular]
+family = "FiraCode Nerd Font Mono"
+style = "Normal"
+weight = 500
+
+[fonts.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Normal"
+weight = 900
+
+[fonts.italic]
+family = "FiraCode Nerd Font Mono"
+style = "Italic"
+weight = 500
+
+[fonts.bold-italic]
+family = "FiraCode Nerd Font Mono"
+style = "Italic"
+weight = 900
+
+[colors]
+# Regular colors
+background = '#0F0D0E'
+black = '#4C4345'
+blue = '#006EE6'
+cursor = '#F38BA3'
+cyan = '#88DAF2'
+foreground  = '#F9F4DA'
+green = '#0BA95B'
+magenta = '#7B5EA7'
+red = '#ED203D'
+white = '#F1F1F1'
+yellow = '#FCBA28'
+
+# Log level
+#
+# This property enables log level filter and file. The default level is "OFF" and the logs are not logged to a file as default.
+#
+# Example:
+# [developer]
+# log-level = "OFF"
+# enable-log-file = false
+

@@ -1,0 +1,46 @@
+output=<not set>
+font=FiraCode Nerd Font Mono
+dpi-aware=auto
+prompt="> "
+icons-enabled=yes
+fields=filename,name,generic
+password-character=*
+# fuzzy=yes
+show-actions=no
+terminal=kitty  # Note: you cannot actually use environment variables here
+# launch-prefix=<not set>
+
+lines=15
+width=30
+horizontal-pad=40
+vertical-pad=8
+inner-pad=0
+
+image-size-ratio=0.5
+
+# line-height=<use font metrics>
+letter-spacing=0
+
+layer = top
+exit-on-keyboard-focus-loss = yes
+
+[border]
+width=1
+radius=10
+
+[dmenu]
+# mode=text  # text|index
+exit-immediately-if-empty=yes
+
+[colors]
+background=1e1e2edd
+text=cdd6f4ff
+prompt=bac2deff
+placeholder=7f849cff
+input=cdd6f4ff
+match=f5e0dcff
+selection=585b70ff
+selection-text=cdd6f4ff
+selection-match=f5e0dcff
+counter=7f849cff
+border=f5e0dcff

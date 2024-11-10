@@ -1,21 +1,26 @@
 function fish_prompt
-    # This is a simple prompt. It looks like
-    # alfa@nobby /path/to/dir $
-    # with the path shortened and colored
-    # and a "#" instead of a "$" when run as root.
-    set -l symbol ' $ '
-    set -l color $fish_color_cwd
-    if fish_is_root_user
-        set symbol ' # '
-        set -q fish_color_cwd_root
-        and set color $fish_color_cwd_root
+    if not set -q VIRTUAL_ENV_DISABLE_PROMPT
+        set -g VIRTUAL_ENV_DISABLE_PROMPT true
     end
+    set_color yellow
+    printf '%s' $USER
+    set_color normal
+    printf ' at '
 
-    echo -n $USER@$hostname
+    set_color magenta
+    echo -n (prompt_hostname)
+    set_color normal
+    printf ' in '
 
-    set_color $color
-    echo -n (prompt_pwd)
+    set_color $fish_color_cwd
+    printf '%s' (prompt_pwd)
     set_color normal
 
-    echo -n $symbol
+    # Line 2
+    echo
+    if test -n "$VIRTUAL_ENV"
+        printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
+    end
+    printf '↪ '
+    set_color normal
 end
