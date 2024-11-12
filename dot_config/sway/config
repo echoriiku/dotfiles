@@ -1,6 +1,6 @@
 include catppuccin-mocha
 
-font pango: JetBrainsMono Nerd Font 14
+font pango: JetBrainsMono Nerd Font 10
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -23,7 +23,7 @@ assign [class="Spotify"]       → workspace number 4
 
 
 ### Output configuration
-output DP-3 resolution 1920x1080@144Hz position 1920,0 adaptive_sync enable bg /home/riiku/Imagens/Wallpapers/wallhaven-yxdwqg_1920x1080.png fill
+output DP-3 resolution 1920x1080@144Hz position 1920,0 adaptive_sync enable bg /home/riiku/Downloads/gallery-dl/danbooru/dhjs_0010/danbooru_5487649_59b54ea4844faf75311b16dcb359906b.png fill
 
 
 exec_always {
@@ -66,7 +66,7 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     # Start file explorer
-    bindsym $mod+Shift+f exec dolphin
+    bindsym $mod+Shift+f exec pcmanfm-qt 
 
     # Kill focused window
     bindsym $mod+Shift+q kill

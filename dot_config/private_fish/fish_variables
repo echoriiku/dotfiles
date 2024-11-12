@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR MANPAGER:less\x20\x2dR\x20\x2d\x2duse\x2dcolor\x20\x2dDd\x2br\x20\x2dDu\x2bb
+SETUVAR XDG_CONFIG_HOME:/home/riiku/\x2econfig
 SETUVAR ZELLIJ_AUTO_EXIT:true
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:969896

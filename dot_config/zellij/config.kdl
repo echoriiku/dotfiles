@@ -246,7 +246,7 @@ load_plugins {
 //   - true
 //   - false (Default)
 // 
-simplified_ui false
+simplified_ui true
  
 // Choose the theme that is specified in the themes section.
 // Default: default
@@ -297,7 +297,7 @@ mouse_mode true
 //   - true (default, enabled)
 //   - false
 // 
-pane_frames false 
+pane_frames true
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

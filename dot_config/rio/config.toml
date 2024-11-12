@@ -1,3 +1,4 @@
+env-vars = ["TERM=xterm-256color"]
 theme = "catppuccin-mocha"
 
 # Padding-x
@@ -30,6 +31,7 @@ decorations = "disabled"
 [renderer]
 performance = "High"
 backend = "Automatic"
+target-fps = 144
 # strategy = "Continuous"
 disable-unfocused-render = false
 
@@ -48,7 +50,7 @@ use-kitty-keyboard-protocol = true
 
 [fonts]
 size = 15
-extras = [{ family = "Symbols Nerd Font" }]
+extras = [{ family = "Font Awesome 6 Free" }]
 
 [fonts.regular]
 family = "FiraCode Nerd Font Mono"
@@ -71,18 +73,38 @@ style = "Italic"
 weight = 900
 
 [colors]
-# Regular colors
-background = '#0F0D0E'
-black = '#4C4345'
-blue = '#006EE6'
-cursor = '#F38BA3'
-cyan = '#88DAF2'
-foreground  = '#F9F4DA'
-green = '#0BA95B'
-magenta = '#7B5EA7'
-red = '#ED203D'
-white = '#F1F1F1'
-yellow = '#FCBA28'
+light-red = "#bc5653"
+light-yellow = "#ebc17a"
+light-blue = "#7eaac7"
+light-black = "#636363"
+light-cyan = "#86d3ce"
+light-white = "#f7f7f7"
+light-green = "#909d63"
+light-magenta = "#aa6292"
+dim-background = "#202020"
+light-background = "#3a3a3a"
+dim-foreground = "#dbdbdb"
+light-foreground = "#d9d9d9"
+background = "#2c2c2c"
+foreground = "#d6d6d6"
+dim-blue = "#556b79"
+dim-cyan = "#5c8482"
+dim-magenta = "#6e4962"
+dim-green = "#5e6547"
+dim-white = "#828282"
+dim-red = "#74423f"
+dim-black = "#232323"
+dim-yellow = "#8b7653"
+cursor = "#d9d9d9"
+text = "#2c2c2c"
+white = "#cacaca"
+green = "#909d63"
+magenta = "#aa6292"
+red = "#bc5653"
+black = "#1c1c1c"
+cyan = "#86d3ce"
+yellow = "#ebc17a"
+blue = "#7eaac7"
 
 # Log level
 #
