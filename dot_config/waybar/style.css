@@ -1,195 +1,133 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-@import "mocha.css";
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-@keyframes blink-warning {
-    70% {
-        color: white;
-    }
-
-    to {
-        color: white;
-        background-color: orange;
-    }
-}
-
-@keyframes blink-critical {
-    70% {
-      color: white;
-    }
-
-    to {
-        color: white;
-        background-color: red;
-    }
-}
-
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
 * {
-    border: none;
-    border-radius: 5;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 11pt;
+  font-weight: bold;
+  border-radius: 0px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
-
-/* The whole bar */
-#waybar {
-    background: @base;
-    color: @text;
-    font-family: JetBrains Mono Nerd Font, Noto Sans, sans-serif;
-    font-size: 13px;
-    border-radius: 0;
+@keyframes blink_red {
+  to {
+    background-color: rgb(242, 143, 173);
+    color: rgb(26, 24, 38);
+  }
 }
-
-/* Each module */
-#battery,
-#clock,
-#cpu,
-#custom-keyboard-layout,
-#memory,
-#mode,
-#network,
-#pulseaudio,
-#temperature,
-#tray {
-    padding-left: 10px;
-    padding-right: 10px;
+.warning, .critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
-
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-
-#battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+window#waybar {
+  background-color: transparent;
 }
-
-#battery.warning {
-    color: orange;
+window > box {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: rgb(30, 30, 46);
 }
-
-#battery.critical {
-    color: red;
+#workspaces {
+  padding-left: 0px;
+  padding-right: 4px;
 }
-
-#battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+#workspaces button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
-
-#battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
+#workspaces button.focused {
+  background-color: rgb(181, 232, 224);
+  color: rgb(26, 24, 38);
 }
-
-#clock {
-    font-weight: bold;
+#workspaces button.urgent {
+  color: rgb(26, 24, 38);
 }
-
-#cpu {
-  /* No styles */
+#workspaces button:hover {
+  background-color: rgb(248, 189, 150);
+  color: rgb(26, 24, 38);
 }
-
-#cpu.warning {
-    color: orange;
+tooltip {
+  background: rgb(48, 45, 65);
 }
-
-#cpu.critical {
-    color: red;
+tooltip label {
+  color: rgb(217, 224, 238);
 }
-
+#custom-launcher {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: rgb(201, 203, 255);
+}
+#mode, #clock, #memory, #temperature,#cpu, #music, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* #mode { */
+/* 	margin-left: 10px; */
+/* 	background-color: rgb(248, 189, 150); */
+/*     color: rgb(26, 24, 38); */
+/* } */
 #memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: rgb(181, 232, 224);
 }
-
-#memory.warning {
-    color: orange;
+#cpu {
+  color: rgb(245, 194, 231);
 }
-
-#memory.critical {
-    color: red;
-    animation-name: blink-critical;
-    animation-duration: 2s;
+#clock {
+  color: rgb(217, 224, 238);
 }
-
-#mode {
-    background: #64727D;
-    border-top: 2px solid white;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
+#idle_inhibitor {
+  color: rgb(221, 182, 242);
 }
-
+#temperature {
+  color: rgb(150, 205, 251);
+}
+#backlight {
+  color: rgb(248, 189, 150);
+}
+#pulseaudio {
+  color: rgb(245, 224, 220);
+}
 #network {
-    /* No styles */
+  color: #ABE9B3;
 }
 
 #network.disconnected {
-    color: orange;
+  color: rgb(255, 255, 255);
+}
+#battery.charging, #battery.full, #battery.discharging {
+  color: rgb(250, 227, 176);
+}
+#battery.critical:not(.charging) {
+  color: rgb(242, 143, 173);
+}
+#custom-powermenu {
+  color: rgb(242, 143, 173);
 }
 
-#pulseaudio {
-    /* No styles */
-}
-
-#pulseaudio.muted {
-    /* No styles */
-}
-
-#custom-spotify {
-    color: rgb(102, 220, 105);
-}
-
-#temperature {
-    /* No styles */
-}
-
-#temperature.critical {
-    color: red;
+#custom-music {
+  padding-right: 10px;
+  padding-left:  10px;
 }
 
 #tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+  padding-right: 8px;
+  padding-left: 10px;
 }
 
-#window {
-    font-weight: bold;
+#music {
+  font-family: "JetBrains Mono Nerd Font" ;
+  color: #c0caf5;
 }
-
-#workspaces button {
-    border-top: 2px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: @lavender;
+#music.paused {
+  color: #414868;
+  font-style: italic;
 }
-
-#workspaces button.focused {
-    color: @mauve;
+#music.stopped {
+  background: transparent;
 }
-
-#workspaces button.urgent {
-    color: @saphire;
+#custom-cava-internal {
+  font-family: "JetBrains Mono Nerd Font" ;
 }

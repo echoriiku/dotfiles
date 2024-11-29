@@ -1,62 +1,85 @@
-include catppuccin-mocha
+    include catppuccin-mocha
 
-font pango: JetBrainsMono Nerd Font 10
+    font pango: JetBrainsMono Nerd Font 10
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
+    set $mod Mod4
+
+#-----------------------------------#
+# Home row direction keys, like vim #
+#-----------------------------------#
+    set $left  h
+    set $down  j
+    set $up    k
+    set $right l
 # Your preferred terminal emulator
-set $term footclient
-# Your preferred application launcher
-set $menu fuzzel
+    set $term rio
+# Explorer
+    set $explorer dolphin
+# Background
+    set $background /home/riiku/Imagens/Wallpapers/wallhaven-wez85r.jpg
 
 ### Assign applications to workspaces
-assign [app_id="firefox"]       → workspace number 1
-assign [app_id="footclient"]       → workspace number 2
-assign [class="steam"]       → workspace number 3
-assign [class="Spotify"]       → workspace number 4
+    assign [app_id="firefox"]       → workspace number 1
+    assign [app_id="footclient"]       → workspace number 2
+    assign [app_id="rio"]       → workspace number 2
+    assign [class="steam"]       → workspace number 3
+    assign [class="Spotify"]       → workspace number 4
+    assign [app_id="Notesnook"]       → workspace number 5
 
+#-------------------------------#
+# Switch to prev/next workspace #
+#-------------------------------#
+#comma(,) period(.)
+    bindsym $mod+period workspace next
+    bindsym $mod+comma workspace prev
 
 ### Output configuration
-output DP-3 resolution 1920x1080@144Hz position 1920,0 adaptive_sync enable bg /home/riiku/Downloads/gallery-dl/danbooru/dhjs_0010/danbooru_5487649_59b54ea4844faf75311b16dcb359906b.png fill
+    output DP-3 allow_tearing yes resolution 1920x1080@144Hz position 1920,0 adaptive_sync enable bg $background fill
 
+    exec {
+        firefox
+        rio
+        flatpak run com.spotify.Client
+    }
 
-exec_always {
-    foot --server
-    mako
-}
+#-----------#
+# Autostart #
+#-----------#
+    exec_always  --no-startup-id  mako &
+    exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
 
 ### Input configuration
-input "type:keyboard" {
-    xkb_layout br
-    xkb_variant abnt2
-    xkb_model abnt2
-    repeat_rate 50
-    repeat_delay 300
-}
+    input "type:keyboard" {
+        xkb_layout br
+        xkb_variant abnt2
+        xkb_model abnt2
+        repeat_rate 50
+        repeat_delay 300
+    }
 
     
-input "type:Mouse" {
-    left_handed disabled 
-    natural_scroll disabled
-    accel_profile flat
-    pointer_accel 1 
-}
+    input "type:Mouse" {
+        left_handed disabled 
+        natural_scroll disabled
+        accel_profile flat
+        pointer_accel 1 
+    }
 
-input "type:pointer" accel_profile flat
+    input "type:pointer" accel_profile flat
+
+# Lock
+    set $lock_bg /home/riiku/Imagens/Wallpapers/pine-watt-2Hzmz15wGik-unsplash.jpg
+    bindsym $mod+Alt+l exec swaylock --hide-keyboard-layout -i $lock_bg
 
 # Idle
-exec swayidle -w \
-         timeout 600 'swaylock -f -c 000000' \
-         timeout 900 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
-
+    exec swayidle -w \
+             timeout 300 'swaylock --hide-keyboard-layout -f -c 000000 -i $lock_bg' \
+             timeout 600 'swaymsg "output * power off"' \
+             resume 'swaymsg "output * power on"' \
+             after-resume 'swaymsg "output * enable"' \
+             before-sleep 'swaylock --hide-keyboard-layout -f -c 000000 -i $lock_bg'
 
 
 ### Key bindings
@@ -64,15 +87,16 @@ exec swayidle -w \
 # Basics:
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $term --class="termfloat"
 
     # Start file explorer
-    bindsym $mod+Shift+f exec pcmanfm-qt 
+    bindsym $mod+Shift+f exec $explorer
 
     # Kill focused window
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+d exec ~/.config/rofi/launcher.sh
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -83,6 +107,12 @@ exec swayidle -w \
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+
+    # Start Swaylock
+    bindsym $mod+p exec --no-startup-id ~/.config/sway/swaylock.sh
+
+    # Start your powermenu
+    bindsym $mod+Shift+p exec ~/.config/rofi/powermenu.sh
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -161,6 +191,8 @@ exec swayidle -w \
     bindsym $mod+a focus parent
 
 # Resizing containers:
+bindsym $mod+r mode "resize"
+
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -181,31 +213,74 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+
+## Better to resize window
+bindsym Shift+Ctrl+h             resize shrink width  5 px or 5 ppt
+bindsym Shift+Ctrl+k             resize grow   height 5 px or 5 ppt
+bindsym Shift+Ctrl+j             resize shrink height 5 px or 5 ppt
+bindsym Shift+Ctrl+l             resize grow   width  5 px or 5 ppt
+bindsym Shift+Ctrl+Left          resize shrink width  5 px or 5 ppt
+bindsym Shift+Ctrl+Up            resize grow   height 5 px or 5 ppt
+bindsym Shift+Ctrl+Down          resize shrink height 5 px or 5 ppt
+bindsym Shift+Ctrl+Right         resize grow   width  5 px or 5 ppt
 
 # Utilities:
-    # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle;exec notify-send "Volume Mute"
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%;exec notify-send "Volume +"
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%;exec notify-send "Volume -"
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-    bindsym --locked XF86AudioPlay exec playerctl play-pause
+# Special keys to adjust volume via Pipewire
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || wpctl get-volume @DEFAULT_AUDIO_SINK@ > $WOBSOCK
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+bindsym --locked XF86AudioPlay exec playerctl play-pause
 
-    # Special keys to adjust brightness via brightnessctl
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim - | tee /home/riiku/Imagens/"Capturas de tela"/Captura\ de\ imagem_$(date +%Y%m%d_%H%M%S).png | wl-copy
-    # bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
-    bindsym Shift+Print exec grim -g "$(slurp)" - | tee /home/riiku/Imagens/"Capturas de tela"/Captura\ de\ imagem_$(date +%Y%m%d_%H%M%S).png | wl-copy
+# Special key to take a screenshot with grimshot
+bindsym Print exec grimshot --notify savecopy output $HOME/Imagens/Capturas\ de\ tela/Captura\ de\ imagem_$(date +%Y%m%d_%H%M%S).png
+bindsym Shift+Print exec grimshot --notify savecopy area $HOME/Imagens/Capturas\ de\ tela/Captura\ de\ imagem_$(date +%Y%m%d_%H%M%S).png
 
-# Gaps
-gaps inner 4px
+#-----------------------------#
+#           Misc              #
+#-----------------------------#
+output * adaptive_sync on
 
-# Border
-default_border pixel 2 #disable window titlebar
+default_border pixel 3
+default_floating_border pixel 3
+gaps inner  5
+gaps outer  0
+bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
+bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
 
-# Colors
+# Activate smart borders (always)
+smart_borders on
+
+#------------------------------#
+# Always float certain windows #
+#------------------------------#
+#swaymsg -t get_tree | grep app_id
+    for_window [app_id="pop-up"]                     floating enable
+    for_window [app_id="bubble"]                     floating enable 
+    for_window [app_id="task_dialog"]                floating enable
+    for_window [app_id="Preferences"]                floating enable
+    for_window [app_id="dialog"]                     floating enable 
+    for_window [app_id="menu"]                       floating enable
+    for_window [app_id="Organizer"]                  floating enable
+    for_window [app_id="About"]                      floating enable
+    for_window [app_id="toolbox"]                    floating enable
+    for_window [app_id="page-info"]                  floating enable	
+    for_window [app_id="termfloat"]                  floating enable
+    for_window [app_id="termfloat"]                  resize set height 540
+    for_window [app_id="termfloat"]                  resize set width 960
+    for_window [app_id="mpv"]                        floating enable 
+    for_window [app_id="mpv"]                        resize set height 900
+    for_window [app_id="mpv"]                        resize set width 1600
+    for_window [app_id="org.kde.dolphin"]                   floating enable 
+    for_window [app_id="org.kde.dolphin"]                   resize set height 900
+    for_window [app_id="org.kde.dolphin"]                   resize set width 1600
+    for_window [app_id="org.kde.kalk"]               floating enable
+
+
+
+#----------------------------------------#
+# window colours: border background text #
+#----------------------------------------#
 # target                 title     bg    text   indicator  border
 client.focused           $lavender $base $text  $rosewater $lavender
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
@@ -215,10 +290,10 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 # Status Bar:
-bar {
-    # Run waybar instead of swaybar.
-    # It's config is in ~/.config/waybar/.
-    swaybar_command waybar
-}
+# bar {
+#     # Run waybar instead of swaybar.
+#     # It's config is in ~/.config/waybar/.
+#     swaybar_command waybar
+# }
 
 include /etc/sway/config.d/*
